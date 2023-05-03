@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/style.css">
+    <title>พี่หมอ</title>
+</head>
+<body onload="playAudio()" >
+    <div class="face" id="face" >
+        <img src="/static/images/face.gif" alt="">
+    </div>
+    <div class="container" id="container" >
+        <div class="contetn">
+            <div class="te"><h2>มีคำถามปรึกษาพี่หมอ</h2></div>
+            <ul>
+                <li><a href="/data_page/a1_พาราเซตามอล.html"><div class="item"><h2>ปวดหัว</h2></div></a></li>
+                <li><a href="/data_page/a2_ไดโคลฟีแนค.html"><div class="item"><h2>ข้อเข่าเสื่อม</h2></div></a></li>
+                <li><a href="/data_page/b1_แอซิโทรไมซิน.html"><div class="item"><h2>ติดเชื้อทื่เกิดจากเชื้อแบคทีเรีย</h2></div></a></li>
+                <li><a href="/data_page/b2_ซิโพรฟลอกซาซิน.html"><div class="item"><h2>ติดเชื้อแบคทีเรียทางเดินปัสสาวะ</h2></div></a></li>
+                <li><a href="/data_page/c1_แคลเซียมคาร์บอเนต.html"><div class="item"><h2>ขาดแคลเซียม</h2></div></a></li>
+                <li><a href="/data_page/openai.html"><div class="item"><h2>openai</h2></div></a></li>
+            </ul>
+        </div>
+        <footer><h3>develop by tupubon 2023</h3></footer>
+    </div>
+    <script>
+        const audio = new Audio("/static/audio/สวัสดี.mp3");
+        document.getElementById("face").addEventListener('click',()=>{
+            document.getElementById("face").style.display = "none";
+            document.getElementById("container").style.display = "flex";
+            audio.play();
+        })
+    </script>
+</body>
+</html>

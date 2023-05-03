@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>OpenAI Text Generator</title>
+  </head>
+  <body>
+    <h1>OpenAI Text Generator</h1>
+    <form>
+      <label for="prompt">Enter a prompt:</label>
+      <input type="text" id="prompt" name="prompt"><br><br>
+      <input type="submit" value="Generate text">
+    </form>
+    <div id="output"></div>
+    <script>
+      // Replace YOUR_API_KEY with your actual OpenAI API key
+      const apiKey = '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';
+
+      // Get references to the form and output elements
+      const form = document.querySelector('form');
+      const output = document.querySelector('#output');
+
+      // Add an event listener to the form to generate text when it's submitted
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        // Get the user's prompt from the form
+        const prompt = document.querySelector('#prompt').value;
+
+        // The OpenAI API endpoint to send requests to
+        const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
+
+        // The options to send with the request
+        const options = {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`
+          },
+          body: JSON.stringify({
+            prompt: prompt,
+            max_tokens: 200,
+            n: 1,
+            stop: '\n'
+          })
+        };
+
+        // Send the request to the OpenAI API endpoint
+        fetch(apiUrl, options)
+          .then(response => response.json())
+          .then(data => {
+            // Display the generated text in the output element
+            output.innerHTML = `<p>${data.choices[0].text}</p>`;
+          })
+          .catch(error => {
+            // Display any errors in the output element
+            output.innerHTML = `<p>Error: ${error.message}</p>`;
+          });
+      });
+    </script>
+  </body>
+</html>

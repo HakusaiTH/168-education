@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-family: 'Noto Serif Thai', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+.face {
+    display: flex;
+    padding-top: 10%;
+    text-align: center;
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: none;
+    flex-direction: column;
+}
+
+.top {
+    text-align: center;
+    height: 30%;
+    padding: 3px;
+}
+
+.top img {
+    width: 50%;
+    height: 350px;
+}
+
+.contetn {
+    margin: 30px;
+    margin-top: 10%;
+}
+
+.contetn ul {
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+.contetn li {
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.item {
+    color: white;
+    background-color: rgb(1, 204, 1);
+    padding: 15px;
+}
+
+.item h3 {
+    margin: 0px;
+}
+
+.te {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+.te h2 {
+    margin: 0px;
+}
+
+footer {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -850px;
+    background-color: gray;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    margin: 0px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="/style_data.css">
+    <title>พาราเซตามอล</title>
+</head>
+<body>
+    <div class="container" id="container" >
+        <div class="contetn">
+            <div class="ti"><h2>พาราเซตามอล</h2></div>
+            <img src="/static/data/1.ปวดหัว.jpg">
+            <ul>
+                <h2>ข้อมูลเบื้องต้น</h2>
+                <li><h3>ใช้สำหรับลดไข้บรรเทาอาการปวดเล็กน้อยจนถึงปานกลาง เช่น ปวดศีรษะเป็นต้น</h3></li>
+            </ul>
+            <ul>
+                <h2>ข้อควรระวัง</h2>
+                <li><h3>ห้ามใช้กับผู้ที่เคยแพ้พาราเซตามอลหรือแพ้ส่วนประกอบอื่นในยานี้</h3></li>
+                <li><h3>ห้ามใข้ยาเกินขนาดเพราะอาจเกิดพิษร้ายแรง</h3></li>
+            </ul>
+            <div class="bottom">
+                <button class="r" id="r" ><img  id="btn_a" src="/static/images/speke_nr.png" alt=""></button>
+                <div class="bottom_item">
+                    <button class="g" id="g" ><h3>นำทาง</h3></button>
+                    <button  class="c" id="c" ><a href="/"><h3>ยกเลิก</h3></a></button>
+                </div>
+            </div>
+        </div>
+        <footer><h3>develop by tupubon 2023</h3></footer>
+    </div>
+    <div class="num_n" id="num_n" ><h1>A1</h1></div>
+    <script>
+        const audio = new Audio("/static/audio/พาราเซตามอล.mp3");
+        const d_ = "1";
+    </script>
+    <script src="/script_data.js"></script>
+</body>
+</html>
